@@ -58,17 +58,15 @@ try {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
-    $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'dorojnye.znaki@yandex.ru'; // Логин на почте
-    $mail->Password   = 'olqFsdfHBDFJSd$4'; // Пароль на почте
+    $mail->Host       = ''; // SMTP сервера вашей почты
+    $mail->Username   = ''; // Логин на почте
+    $mail->Password   = ''; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('dorojnye.znaki@yandex.ru', 'Дорожные Знаки'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('tk@lmgmedia.ru');
-    $mail->addAddress('mirotin@lmgmedia.ru');
-    $mail->addAddress('sabirov@lmgmedia.ru');
+    
 
     // Прикрипление файлов к письму
 if (!empty($file['name'][0])) {
